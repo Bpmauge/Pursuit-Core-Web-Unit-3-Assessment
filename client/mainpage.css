@@ -1,9 +1,11 @@
 
 body{ 
     text-align: center;
-    background-color: RGBa(57, 135, 201, 0.25);
+    background-color: RGBa(57, 135, 201, 0.3);
 }
-
+h1{
+    font-size: 4vw;
+}
 #researcherForm{
     visibility: hidden;
 }
@@ -11,13 +13,53 @@ body{
     float: left;
 }
 #scientists{
-    text-align: start;
+    /* text-align: start; */
     list-style: none;
 }
 #animalList{
     float: right;
 }
+#animals{
+    /* text-align: start; */
+    list-style: none;
+}
 
 #sightingDiv{
     margin-top: 250px;
+}
+
+#sightings{
+    list-style: none;
+}
+
+@media only screen and (max-width: 503px){
+    body{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    h1{
+        font-size: 32px;
+        
+    }
+    h2{
+        margin-left: 25px;
+    }
+    #researcherList{
+      order: 1;  
+    }
+    #scientists{
+        text-align: center;
+        list-style: none;
+    }
+    #animalList{
+       order: 2;
+    }
+    #animals{
+        list-style: none;
+    }
+    #sightingDiv{
+        order: 3;
+        margin-top: 0px;
+    }
 }
