@@ -28,7 +28,6 @@ const selectedButton = (button) => {
 const getAllSighting = async (event) => {
     let response = await axios.get(`http://localhost:2591/sightings/`)
     let all = response.data.payload;
-    console.log(all)
     let sightingOL = document.querySelector('#sightings');
     sightingOL.innerText = '';
     let vowels = ['A', 'E', 'I', 'O', 'U'];
@@ -74,7 +73,6 @@ const getResearcherSighting = async (researcher_id) => {
 
     let response = await axios.get(`http://localhost:2591/sightings/researchers/${researcher_id}`);
     let all = response.data.payload;
-    // console.log(all)
     let vowels = ['A', 'E', 'I', 'O', 'U'];
     all.forEach((single) => {
         let listItem = document.createElement('li');
