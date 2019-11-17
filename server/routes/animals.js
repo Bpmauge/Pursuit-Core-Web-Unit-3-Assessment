@@ -6,7 +6,7 @@ const router = express.Router();
 
 const getAllAnimals = async (req, res) => {
     try{
-    let selectQuery = `SELECT * FROM animals`
+    let selectQuery = `SELECT * FROM animals JOIN species ON animals.species_id = species.id`
     let results = await db.any(selectQuery);
     res.status(200).json({
         status: 'success',

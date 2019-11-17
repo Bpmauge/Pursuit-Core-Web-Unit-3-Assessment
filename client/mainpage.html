@@ -12,21 +12,36 @@
 </head>
 
 <body>
-    <form id='sightingForm'>
-        <input type='radio' name='sightings' value='all'> Get All Sightings <br> <br>
-        <input type='radio' name='sightings' value='single'> Get All Sightings by Single Researcher <br>
-    </form>
-    <br>
-    <form id='researcherForm'>
-        <label>Researchers:</label>
-        <select name='researchers' id='researchers'>
-        <option>Please Choose a Researcher</option>
-        </select>
-    </form>
-    <br>
-    <div id='sightingList'>
-        <ol id = 'sightings'></ol>
+    <h1>World's Best Marine Conservatory</h1>
+    <div id='researcherList'>
+        <h3>Meet Our Researchers</h3>
+        <ul id='scientists'></ul>
+    </div>
 
+    <div id='animalList'>
+        <h3>Meet Our Animals</h3>
+        <ul id='animals'></ul>
+    </div>
+
+    <div id='sightingDiv'>
+        <h3>Keep up with our sightings</h3>
+        <form id='sightingForm'>
+
+            <input type='radio' name='sightings' value='all'> Get All Sightings 
+            <input type='radio' name='sightings' value='single'> Get All Sightings by Single Researcher <br>
+        </form>
+        <br>
+        <form id='researcherForm'>
+            <label>Researchers:</label>
+            <select name='researchers' id='researchers'>
+                <option selected='true' disabled='true'>Please Choose a Researcher</option>
+            </select>
+        </form>
+        <br>
+        <div id='sightingList'>
+            <ol id='sightings'></ol>
+
+        </div>
     </div>
 </body>
 

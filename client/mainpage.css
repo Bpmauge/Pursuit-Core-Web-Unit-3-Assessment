@@ -1,0 +1,23 @@
+
+body{ 
+    text-align: center;
+    background-color: RGBa(57, 135, 201, 0.25);
+}
+
+#researcherForm{
+    visibility: hidden;
+}
+#researcherList{
+    float: left;
+}
+#scientists{
+    text-align: start;
+    list-style: none;
+}
+#animalList{
+    float: right;
+}
+
+#sightingDiv{
+    margin-top: 250px;
+}
