@@ -1,15 +1,15 @@
 const express = require('express');
-const cors = require('cors');
 const app = express();
 const port = 2591;
 
-app.use(cors());
-
+app.use(express.json());
 app.use(express.urlencoded({
     extendedL: false
 }));
 
-app.use(express.json());
+const cors = require('cors');
+app.use(cors());
+
 
 const researcherRouter = require('./routes/researchers');
 const speciesRouter = require('./routes/species');
@@ -25,9 +25,13 @@ app.use('/sightings', sightingsRouter);
 
 
 app.get('/', (req, res) => {
-    res.send(`welcome`);
+    res.send(`Welcome to the conservatory`);
+});
+
+app.use('*', (req, res) => {
+    res.status(404).send(`Error: no such route found on Holding server. Try again.`);
 });
 
 app.listen(port, () => {
     console.log(`listening at port:${port}`)
-})
+});
