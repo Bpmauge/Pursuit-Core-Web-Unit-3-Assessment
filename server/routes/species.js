@@ -1,8 +1,7 @@
 const express = require('express');
-const pgp = require('pg-promise')();
-const connectionString = 'postgres://localhost:5432/marine_research_db';
-const db = pgp(connectionString);
 const router = express.Router();
+// Database
+const db = require('../db.js');
 
 const getAllSpecies = async (req, res) => {
     try{
